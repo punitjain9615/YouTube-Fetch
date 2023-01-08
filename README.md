@@ -40,11 +40,7 @@ YOUTUBE_API_KEY = "<API_KEY1>, <API_KEY2>..."
 When using Docker Compose, 
 
 1. Create a `config.env` file using the instructions mentioned above
-2. Set the `DATABASE_URI` environment variable in your `config.env` file to
-
-```
-MONGODB_URI = mongodb://mongo:27017
-```
+2. Set the `DATABASE_URI, QUERY and YOUTUBE_APIS` environment variable in your `config.env` file to
 3. Please run:
 
 ```

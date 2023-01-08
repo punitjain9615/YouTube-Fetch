@@ -7,9 +7,9 @@ services:
         ports:
             - '80:3000'
         environment:
-            YOUTUBE_APIS: AIzaSyBGuxJQ36hW_D_7hlR8rhzk6gXGGXrDOgI,AIzaSyA6XCKGNwghO-jHn1oBq4yYO-v_PTvpC-I,AIzaSyDoX2MrYfuyb5YfVqDZypK9Plz4RPdtA2g,AIzaSyAoUrWX3t_5vbVo06LxnMCJVtGVb1fBD3Y
-            QUERY: football
-            DATABASE_URI: mongodb+srv://Punit_Jain:SENkTeYgH6gD2Txp@cluster0.aqegmbb.mongodb.net/test
+            YOUTUBE_APIS: ${}
+            QUERY: ${}
+            DATABASE_URI: ${} 
         links:
             - mongo
     mongo:
