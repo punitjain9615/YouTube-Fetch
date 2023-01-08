@@ -19,7 +19,7 @@ An API to fetch latest videos in every 10 seconds in sorted reverse chronologica
 Follow the instructions on [API](https://developers.google.com/youtube/v3/getting-started) to get one API for fetching youtube videos.
 
 > **Instructions to run Application:** 
-> - Default values of environment variables, refer [.env.defaults]() file
+> - Default values of environment variables, refer [.env.defaults](https://github.com/punitjain9615/YouTube-Fetch/blob/master/.env.defaults) file
 > - Please provide values to all those variabes. 
 > - In case of multiple API keys, provide them as "," delimited list of keys like so:
 
