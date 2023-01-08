@@ -1,0 +1,24 @@
+version: '3'
+services:
+    web:
+        container_name: fampay
+        restart: always
+        build: .
+        ports:
+            - '80:3000'
+        environment:
+            YOUTUBE_APIS: AIzaSyBGuxJQ36hW_D_7hlR8rhzk6gXGGXrDOgI,AIzaSyA6XCKGNwghO-jHn1oBq4yYO-v_PTvpC-I,AIzaSyDoX2MrYfuyb5YfVqDZypK9Plz4RPdtA2g,AIzaSyAoUrWX3t_5vbVo06LxnMCJVtGVb1fBD3Y
+            QUERY: football
+            DATABASE_URI: mongodb+srv://Punit_Jain:SENkTeYgH6gD2Txp@cluster0.aqegmbb.mongodb.net/test
+        links:
+            - mongo
+    mongo:
+        container_name: mongo
+        image: mongo
+        restart: always
+        ports:
+            - '27017:27017'
+    mongo-express:
+        image: mongo-express
+        ports:
+            - '8081:8081'
