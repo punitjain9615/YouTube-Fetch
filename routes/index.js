@@ -5,7 +5,6 @@ exports.search = async (req, res, next) => {
     const sortBy = "publishedAt";
     let videos;
     if (req.query.search) {
-
       // videos = await videoDB.fuzzySearch(req.query.title);
       // const filtered = videos.filter((video) => {
       //   return video._doc.confidenceScore? video._doc.confidenceScore> 10 : false;
@@ -33,13 +32,14 @@ exports.search = async (req, res, next) => {
     const hasPrev = page > 0;
     const hasNext = page < totalPages;
 
-    res.status(200).json({
+    const result = {
       videos,
       hasPrev,
       hasNext,
       totalItems,
       totalPages,
-    });
+    };
+    return result;
   } catch (err) {
     console.log("Sorry, Request not accepted!");
   }
